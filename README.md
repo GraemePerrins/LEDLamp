@@ -89,3 +89,13 @@ The parts required to build a completed lamp are (all prices are in Australian d
 1. All the code is including under the Arduino/LEDLamp folder. The FastLed library is used to control the LED strip and run colour patterns on it. The different pattern code was generated using Claude AI and the code and associated prompt.txt files are all included.
 2. See the readme.md file inside the Arduino folder for more information about the code.
 
+**Operating the Lamp:**
+ 
+* The lamp LED starts turned off and after a few seconds the first pattern will be displayed on the LEDs. The included code has eight different LED patterns and the lamp will cycle randomly through each pattern every 47 minutes. The pattern sequence is also randomised so that the pattern order will vary after every 12 pattern cycles.
+* Pushing the push button will trigger a pattern change.
+* Each Led pattern has different behaviours as per each pattern code.
+
+Enjoy your LED Lamp. :-)
+
+
+  
