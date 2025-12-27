@@ -1,0 +1,51 @@
+Here is the comprehensive text prompt. You can save this block of text, and if you paste it into an LLM (like ChatGPT, Claude, or Gemini), it will reproduce the logic and structure of the script we just finalized.
+
+***
+
+**PROMPT:**
+
+Write a complete, production-ready Python script to generate a 3D printable STL file of a hollow cylinder with a specific double-helix pattern. Use the libraries `numpy`, `trimesh`, `shapely`, and `argparse`.
+
+**1. General Requirements:**
+* The output must be a valid, binary STL file.
+* The script must use `argparse` for all dimensions.
+* Enable `formatter_class=argparse.ArgumentDefaultsHelpFormatter` so `--help` displays default values.
+* The final mesh must be watertight (manifold), merging all components (cap, cylinder, spirals) into one object.
+* Include a `main` function that prints progress, dimensions, and mesh statistics (vertex count, face count, watertight status).
+
+**2. Geometry Specifications:**
+* **Cylinder Body:**
+    * Hollow cylinder generated via extrusion of a 2D annulus.
+    * Default Outer Diameter: 100mm.
+    * Default Total Height: 230mm.
+    * Default Wall Thickness: 2mm.
+* **Top Cap:**
+    * A separate solid disc closing the top of the cylinder (at z = height).
+    * Thickness: 3mm.
+    * Features 5 curved rectangular slots (true holes) cut using `shapely` booleans.
+    * Slot specs: 4mm inset from edge, 15mm arc length, 3mm radial width.
+* **Spiral Pattern:**
+    * Double helix (one clockwise, one counter-clockwise).
+    * Located between a plain bottom section (20mm) and a plain top section (5mm).
+    * 8 turns default.
+    * Ribbon Width: 4mm.
+    * Ribbon Protrusion (Height): 2mm.
+
+**3. Specific Spiral Geometry Logic (Crucial):**
+The spiral bands must be generated as **solid 3D volumes** (not single-surface sheets) to ensure they are preserved during slicing. Use the following logic for the spiral generation:
+* **Profile Shape (Plateau with Smooth Edges):** The cross-section of the band should be flat in the center but curve smoothly down to the cylinder surface at the edges.
+* **Control Parameter:** Add an argument `--edge-smooth-ratio` (default 0.2).
+    * If ratio is 0.2, the outer 20% of the width on the left and right sides should curve down using a sine-wave ease function.
+    * The middle 60% should remain perfectly flat at maximum height.
+* **Volume Generation:**
+    * Generate a grid of vertices for the **Top Surface** (following the plateau profile).
+    * Generate a grid of vertices for the **Bottom Surface** (offset slightly *into* the cylinder wall by 0.05mm to guarantee intersection).
+    * Stitch these grids together using quads/triangles.
+    * Stitch the side walls (left and right edges).
+    * Stitch the end caps (start and end of the spiral).
+* Use high resolution (e.g., 1200 steps length, 16 steps width) to ensure the curvature is smooth.
+
+**4. Mesh Processing:**
+* Combine the cap, cylinder, and both spiral bands.
+* Run `merge_vertices()`, `remove_duplicate_faces()`, and `fix_normals()` to ensure a clean export.
+
