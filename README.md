@@ -2,7 +2,7 @@
  
 Create a fantastic 3D printed led strip lamp that uses an Arduino Nano to create different coloured patterns on a 60 led strip using the FastLed library. See the project *FinishedLamp* folder for photos and a video of the completed lamp.
 
-The lamp shell, base and led tower are all 3D printed and the FreeCad model files are included so you can easily modify them as needed. The default models will create a Cylinderical lamp with an external double helix pattern that is xx cm tall and approx 10 cm in diameter. 
+The lamp shell, base and led tower are all 3D printed and the FreeCad model files are included so you can easily modify them as needed. The default models will create a Cylinderical lamp with an external double helix pattern that is approx 21.5 cm tall and approx 10 cm in diameter. 
 
 **Printing**:
 
@@ -42,7 +42,7 @@ The parts required to build a completed lamp are (all prices are in Australian d
 
 **Generating the 3D Print STL files:**
 
-> 	If you are happy with the default lamp size *(20 cm tall, and 10 cm diameter) then you can use the project STL files as they are. If you make the LED tower taller then keep in mind you will likely need a longer LED strip. I found the 1m LED strip wrapped in a spiral around the central cylinder fits nicely for a 20cm tall lamp. The lamp cover top includes a number of slot holes to ensure heat is ventilated and will not build up inside the lamp cover.
+> 	If you are happy with the default lamp size *(21.5 cm tall, and 10 cm diameter) then you can use the project STL files as they are. If you make the LED tower taller then keep in mind you will likely need a longer LED strip. I found the 1m LED strip wrapped in a spiral around the central cylinder fits nicely for a 20cm tall lamp. The lamp cover top includes a number of slot holes to ensure heat is ventilated and will not build up inside the lamp cover.
 
 1. The lamp is made from three 3D printed parts, the lamp base (which holds the circuit boards), the lamp base cover and LED tower which is where you glue the LED strip to, and the external lamp shell cover which needs to be semi-translucent and be a high quality STL file with a high mesh count.
 2. The lamp base and LED tower are printed from the FreeCad files. You can adjust the dimensions as needed using the FreeCad files and then generate the STL files as needed. The included models and stl files include external holes for the switches, power connector, and usb-c and are spaced so the push button (to change patterns) faces forward and the usb, power and on/off switch are at the back. I used 
