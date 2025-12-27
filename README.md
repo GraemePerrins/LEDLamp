@@ -1,6 +1,10 @@
 **Arduino Controlled 3D Printed LED Lamp**
  
-Create a fantastic 3D printed led strip lamp that uses an Arduino Nano to create different coloured patterns on a 60 led strip using the FastLed library. See the project *FinishedLamp* folder for photos and a video of the completed lamp.
+Bring your workspace or living room to life by 3D printing a custom LED lamp that slowly shifts through mesmerising, ever‑changing patterns. This hobby project walks you through creating a sleek, modern lamp powered by 60 RGB LEDs and an Arduino Nano, transforming simple components into a dynamic light sculpture.
+
+The Lamp is approx 22 cm high and 10 cm diameter with a stylistic raised spiral helix pattern on the lamp surface. 
+
+See the project *FinishedLamp* folder for photos and a video of the completed lamp.
 
 The lamp shell, base and led tower are all 3D printed and the FreeCad model files are included so you can easily modify them as needed. The default models will create a Cylinderical lamp with an external double helix pattern that is approx 21.5 cm tall and approx 10 cm in diameter. 
 
@@ -37,6 +41,9 @@ The parts required to build a completed lamp are (all prices are in Australian d
 > * If you use metal PCB spacers then just make sure to put electrical tape over the PCB board where you place the spacers to avoid short circuits
 > * In my lamp i used a vertical 3 pin connector for the ELD strip but found it to be just a bit too high to fit the lamp base cover so I ended up soldering the LED strip wires direct to the 3 pin header. Using a 90 degree pin connector will solve that issue for you. 
 > * Use a hot melt glue gun to fix the LED strip to the printed internal lamp tower. The led strip self adhesive will not stick to PLA plastic but hot glue works a treat.
+> * For the AC Adapter I used an old wifi router AC adapter I hand lying around
+
+
 
 **Build Instructions:** 
 
