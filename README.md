@@ -55,17 +55,18 @@ The parts required to build a completed lamp are (all prices are in Australian d
 1. 	If you are happy with the default lamp size *(20 cm tall, and 10 cm diameter) then you can use the project STL files as they are. If you make the LED tower taller then keep in mind you will likely need a longer LED strip. I found the 1m LED strip wrapped in a spiral around the central cylinder fits nicely for a 20cm tall lamp.
 	
 2. 	Printing the Lamp cover shell will take over 12 hours as the generated STL file is quite large and you want good quality for the print. For the lamp cover with normal white PLA filament I used print settings of:
-	 	+ Line height 0.2mm
-	 	+ Line width 0.4mm
-	 	+ Reduce print speed to approx 30 to 40 mm/s
-	 	+ Infil of %50
-	 	+ Make sure to rotate the cover so the top cap is printed at the bottom as that way you avoid needing any supports
+
+	* Line height 0.2mm
+	* Line width 0.4mm
+	* Reduce print speed to approx 30 to 40 mm/s
+	* Infil of %50
+	* Make sure to rotate the cover so the top cap is printed at the bottom as that way you avoid needing any supports
 	
 3. Printing the lamp base and base cover can be done with print settings of:
-	 	+ Line height 0.2mm
-	 	+ Line width 0.4mm
-	 	+ Reduce print speed to approx 30 to 40 mm/s
-	 	+ Infil of %70
+	* Line height 0.2mm
+	* Line width 0.4mm
+	* Reduce print speed to approx 40 to 50 mm/s
+	* Infil of %70
 	 	
 4. Once the parts are printed make sure they fit together. You may need to sand the inside of the lamp cover and also sand or file the lamp base switch and power connector holes to ensure they fit the components you bought.
 
