@@ -91,7 +91,9 @@ The parts required to build a completed lamp are (all prices are in Australian d
 
 **Operating the Lamp:**
  
-* The lamp LED starts turned off and after a few seconds the first pattern will be displayed on the LEDs. The included code has eight different LED patterns and the lamp will cycle randomly through each pattern every 47 minutes. The pattern sequence is also randomised so that the pattern order will vary after every 12 pattern cycles.
+* The lamp LED starts turned off and after a few seconds the first pattern will be displayed on the LEDs. The included code has eight different LED patterns.
+* The lamp will cycle randomly through each pattern every 47 minutes. 
+* The pattern sequence is also randomised so that the pattern order will vary after every 12 pattern cycles.
 * Pushing the push button will trigger a pattern change.
 * Each Led pattern has different behaviours as per each pattern code.
 
