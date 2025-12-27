@@ -1,0 +1,17 @@
+you are an expert arduino developer using the FastLED library.
+
+you have a LED strip of 60 leds. you need to create a arduino code for a pattern.ino file that contains two functions:
+
+void PatternInit(int numLeds);
+void PatternCycle();
+
+the PatternInit function is called once at the start to setup any state variables needed for the main pattern code. All global variables should be prefixed with _pat5 and all global constants with _PAT5_ to ensure namespace uniqueness and the resulting names be in camel case.
+
+the PatternCycle function is called every 20ms and on each call should advance the pattern cycle on the leds using the FastLed library and using HSV colors. 
+
+create a Pattern function which sets a random colour every N cycles , where N is a parameter passed to the PatternInit function. 
+the led colour should be set at maximum saturation in the middle of the led strip and extend for L leds either side of the middle where L is a parameter passed to the PatternInit function. The remaining leds either side of the middle colour leds should then decrease in saturation towards the start and end of the Led strip.
+
+think hard about this and check the the code has no syntax errors and is correct.
+
+
