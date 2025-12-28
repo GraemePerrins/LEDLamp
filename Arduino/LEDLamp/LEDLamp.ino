@@ -12,11 +12,10 @@
 
 #define DEBUGLOG = 0;
 
-const String LAMP_VERSION = "005";
+const String LAMP_VERSION = "006";
 
 // 47 * 60; // every 47 minutes change pattern
 const unsigned int PATTERN_TIMER_SECS_COUNT_INTERVAL = 47 * 60; //47 * 60; // every 47 mins
-const int PATTERN_RANDOMISE_CYCLE = 12; // Randomise pattern sequence after every 12 pattern changes
 
 // Push button 
 const int PUSH_BTN_PIN = 3;
@@ -74,7 +73,7 @@ void initialiseSerial() {
 // push button interrupt 
 //
 const unsigned long DEBOUNCE_TOLERANCE_MS = 60;
-const unsigned long BTN_PRESS_MS = 300;
+const unsigned long BTN_PRESS_MS = 350;
 
 
 

@@ -1,6 +1,9 @@
 #include "LEDPatterns.h"
 
 
+const int LED_PATTERNS_TABLE_SIZE = 9;
+const int PATTERN_RANDOMISE_CYCLE = LED_PATTERNS_TABLE_SIZE; // Randomise pattern sequence after every 12 pattern changes
+
 int patternIndexTable[LED_PATTERNS_TABLE_SIZE];
 const int PATTERNINDEXSIZE = sizeof(patternIndexTable) / sizeof(patternIndexTable[0]);
 unsigned int currentPatternIndex = 0;
@@ -76,13 +79,14 @@ void initialisePatterns(int numLeds) {
   initialisePatternIndexTable();
   
   PinkPurpleCyclePatternInit(numLeds);
-  FirePatternInit(numLeds,25,80);
+  FirePatternInit(numLeds,40,90);
   ColourWaveInit(numLeds);
   BlueSkyInit(numLeds,120);
   ColourPulseInit(numLeds, 10, 5);
-  NoisePulseInit(numLeds, 301);
-  RandomColourInit(numLeds, 3000, 30);
+  NoisePulseInit(numLeds, 260);
+  RandomColourInit(numLeds, 3000, 26);
   LavaLampInit(numLeds);
+  WhiteBreathInit(numLeds, 60);
 
   patternFunctions[0] = &PinkPurpleCycle;
   patternFunctions[1] = &FirePatternCycle;
@@ -92,6 +96,7 @@ void initialisePatterns(int numLeds) {
   patternFunctions[5] = &NoisePulseCycle; 
   patternFunctions[6] = &RandomColourCycle;  
   patternFunctions[7] = &LavaLampCycle;  
+  patternFunctions[8] = &WhiteBreathCycle;  
  
   randomShufflePatternIndexes();
   changePattern();

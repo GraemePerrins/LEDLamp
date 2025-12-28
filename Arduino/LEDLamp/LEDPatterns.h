@@ -9,9 +9,8 @@
 #include "NoisePulse.h"
 #include "RandomColour.h"
 #include "LavaLamp.h"
+#include "WhiteBreath.h"
 
-
-const int LED_PATTERNS_TABLE_SIZE = 16;
 
 void initialisePatterns(int numLeds);
 void randomShufflePatternIndexes();

@@ -1,0 +1,14 @@
+
+you have a LED strip of 60 leds. you need to create a arduino code for a pattern.ino file that contains two functions:
+
+void PatternInit(int numLeds);
+void PatternCycle();
+
+the PatternInit function is called once at the start to setup any state variables needed for the main pattern code. All global variables should be prefixed with _pat7 and all global constants with _PAT7_ to ensure namespace uniqueness and the resulting names be in camel case.
+
+the PatternCycle function is called every 20ms and on each call should advance the pattern cycle on the leds using the FastLed library and using HSV colors. 
+
+create a Pattern function which displays all white which slowly grows in intensity over a number of seconds passed as a parameter to the PatternInit function and then slowly decreases  in intensity over the same number of seconds before repeating. the starting white colour should be about %50 intense white.
+
+think hard about this and check the the code has no syntax errors and is correct.
+
