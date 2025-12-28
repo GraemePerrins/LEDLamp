@@ -32,7 +32,8 @@ void swap(int *a, int *b) {
 
 // Fisher-Yates shuffle algorithm
 void shuffle(int arr[], int n) {
-    // Seed the random number generator
+  // Seed the random number generator
+  // Serial.println(analogRead(0));
   randomSeed(analogRead(0));
 
     for (int i = n - 1; i > 0; i--) {
@@ -97,9 +98,8 @@ void initialisePatterns(int numLeds) {
   patternFunctions[6] = &RandomColourCycle;  
   patternFunctions[7] = &LavaLampCycle;  
   patternFunctions[8] = &WhiteBreathCycle;  
- 
+  delay(200);
   randomShufflePatternIndexes();
-  changePattern();
 }
 
 void patternCycle() {

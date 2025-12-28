@@ -12,7 +12,7 @@
 
 #define DEBUGLOG = 0;
 
-const String LAMP_VERSION = "006";
+const String LAMP_VERSION = "007";
 
 // 47 * 60; // every 47 minutes change pattern
 const unsigned int PATTERN_TIMER_SECS_COUNT_INTERVAL = 47 * 60; //47 * 60; // every 47 mins
